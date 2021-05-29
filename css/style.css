@@ -254,11 +254,11 @@ body{
     display: flex;
     justify-content: center;
 }
-.button{
+.button,
+.submit{
     display: flex;
     padding: 10px 32px;
     border-radius: 4px;
-
     border:  var(--accent-logo-color);
     min-width: 200px;
     background: var(--accent-logo-color);
@@ -268,6 +268,7 @@ body{
     font-size: 16px;
     line-height: 1.87;
     align-items: center;
+    justify-content: center;
     text-align: center;
     letter-spacing: 0.06em;
     transition:  background var(--time-function) var(--cubic-bezier), box-shadow var(--time-function) var(--cubic-bezier);
@@ -275,7 +276,9 @@ body{
 }
 
 .button:hover,
-.button:focus{
+.button:focus,
+.submit:hover,
+.submit:focus{
     background: var(--background-Button-hero);
     box-shadow: var(--color-box-shadow);
 }
@@ -854,7 +857,7 @@ margin-bottom: 50px;
 }
 
 .modal-icon:hover,
-.modal-icon:hover{
+.modal-link-close:focus .modal-icon{
     fill: #2196F3;
 }
 
@@ -864,6 +867,7 @@ margin-bottom: 50px;
                     /*====== SIGNUP FORM ======*/
 
 .form-title{
+
     font-style: 400;
     font-weight: 700;
     font-size: 20px;
@@ -875,18 +879,23 @@ margin-bottom: 50px;
 }
 
 .forma{
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid tomato;
     margin-top: 12px;
-  margin-left: 40px;
-  margin-right: 40px;
-}         
+    margin-left: 40px;
+    margin-right: 40px;
 
+}      
+
+.forma-registration{
+    margin-bottom: 10px;
+}
 
 .form-description{
-    display: block;
+
+    display: flex;
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
@@ -895,33 +904,128 @@ margin-bottom: 50px;
 
 }
 
-.form-input,
 .feedback-input{
+
     display: flex;
     width: 100%;
     height: 40px;
-    
-    
-    padding: 0;
+    padding: 12px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
+    resize: none;
+    margin-bottom: 20px;
 
 }
-.feedback-input{
+
+.icon-form{
+    position: relative;
+    display: block;
     width: 100%;
-    height: 120px;
+}
+
+.form-input{
+    
+    display: flex;
+    width: 100%;
+    height: 40px;
+    padding-left: 30px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
     
 }
 
-.checkbox-text,
-.input-icon-checkbox{
+.input-icon{
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition:  fill var(--time-function) var(--cubic-bezier);
+
+}
+
+.icon-form:focus-within > .input-icon,
+.icon-form:hover > .input-icon{
+    fill: var(--accent-logo-color);
+}
+
+.feedback-input{
+    width: 100%;
+    height: 120px;
+}
+
+.forma-checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.checkbox-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+}
+
+.checkbox{
+    
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+}
+
+.icon-checkbox{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 15px;
+    margin-right: 9px;
+    border: 2px solid var(--title-black-color);
+    border-radius: 10%;
+    transition:  
+    background-color var(--time-function) var(--cubic-bezier),
+    border-color var(--time-function) var(--cubic-bezier),
+    background-origin var(--time-function) var(--cubic-bezier);
+
+}
+
+.checkbox:checked + .icon-checkbox,
+.checkbox:focus + .icon-checkbox{
+    
+    background-color: var(--accent-logo-color);
+    border-color: var(--accent-logo-color);
+    background-origin: border-box;
+}
+
+
+
+.checkbox-text{
     display: inline-block;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
+    
+}
+.input-icon-checkbox{
 
+    width: 16px;
+    height: 15px;
+    cursor: pointer;
 }
 
 .checkbox-text-doc{
@@ -929,24 +1033,16 @@ margin-bottom: 50px;
 }
 
 
-.icon-form{
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.input-icon{
-    display: flex;
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    margin-left: 11px;
-}
     
 .input-icon-checkbox{
+
+    display: block;
+    position: absolute;
     width: 16px;
     height: 15px;
-    margin: 0;
-
+    
 }
+
+
+
+    
