@@ -422,24 +422,28 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer-form">
-                    <p class="subscribe-title">Подпишитесь на рассылку</p>
-                    <form action="footer_form" class="subscribe">
 
-                        <label class="footer-subscribe">
-                            <input type="email" name="email" class="input-footer" placeholder="E-mail">
-                        </label>
-                        <button type="submit" class="submit-subscribe">Подписаться
-                            <svg class="input-footer-icon">
-                                <use href="./images/image.svg/sprite.svg#icon-icon-send">
-                                </use>
-                            </svg>
+
+                <form action="footer_form" class="subscribe">
+                    <p class="subscribe-title">Подпишитесь на рассылку</p>
+                    <div class="subscribe-container">
+                        <label for="user_subscribe" class="footer-subscribe"></label>
+                        <input type="email" name="email" id="user_subscribe" class="input-footer"
+                            placeholder="E-mail" />
+                        <button type="submit" class="submit-subscribe">
+                            <span class="submit-icon">Подписаться
+                                <svg class="input-footer-icon">
+                                    <use href="./images/image.svg/sprite.svg#icon-icon-send">
+                                    </use>
+                                </svg>
+                            </span>
                         </button>
-                    </form>
-                </div>
+                    </div>
+                </form>
+
             </div>
         </div>
-        </div>
+
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -449,68 +453,64 @@
                         <use href="./images/image.svg/sprite.svg#icon-closeblack">
                         </use>
                     </svg></button>
-                <h3 class="form-title">Оставьте свои данные, мы вам перезвоним</h3>
-                <div class="forma">
-                    <form name="signup_form" autocomplete="on" novalidate class="forma-registration">
-                        <label><span class="form-description">Имя</span>
-                            <div class="icon-form">
-                                <input type="name" name="name" class="form-input" placeholder=" " />
-                                <svg class="input-icon">
-                                    <use href="./images/image.svg/sprite.svg#icon-person">
-                                    </use>
-                                </svg>
-                            </div>
-                        </label>
-                    </form>
 
-                    <form name="signup_form" autocomplete="on" novalidate class="forma-registration">
-                        <label><span class="form-description">Телефон</span>
-                            <div class="icon-form">
-                                <input type="tel" name="phone" class="form-input" placeholder=" " />
+                <form name="signup_form" autocomplete="off" class="forma">
+                    <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
 
-                                <svg class="input-icon">
-                                    <use href="./images/image.svg/sprite.svg#icon-phone">
-                                    </use>
-                                </svg>
-                            </div>
-                        </label>
-                    </form>
+                    <label for="user_name" class="user-form"><span class="form-description">Имя</span></label>
+                    <div class="icon-form">
+                        <input type="text" name="user-name" id="user_name" class="form-input" />
+                        <svg class="input-icon">
+                            <use href="./images/image.svg/sprite.svg#icon-person">
+                            </use>
+                        </svg>
+                    </div>
 
-                    <form name="signup_form" autocomplete="on" novalidate class="forma-registration">
-                        <label><span class="form-deptionscri">Почта</span>
-                            <div class="icon-form">
-                                <input type="email" name="email" class="form-input" placeholder=" " />
-                                <svg class="input-icon">
-                                    <use href="./images/image.svg/sprite.svg#icon-email">
-                                    </use>
-                                </svg>
-                            </div>
-                        </label>
-                    </form>
-                    <form name="signup_form" autocomplete="on" novalidate class="forma-feedback">
-                        <label><span class="form-description">Комментарий</span>
-                            <textarea name="feedback" rows="5" placeholder="Введите текст"
-                                class="feedback-input"></textarea>
-                        </label>
-                    </form>
-                </div>
-                <form name="signup_form" autocomplete="on" novalidate class="forma-checkbox">
-                    <label class="checkbox-container">
+                    <label for="user_phone" class="user-form"><span class="form-description">Телефон</span></label>
+                    <div class="icon-form">
+                        <input type="tel" name="phone" id="user_phone" class="form-input" />
+                        <svg class="input-icon">
+                            <use href="./images/image.svg/sprite.svg#icon-phone">
+                            </use>
+                        </svg>
+                    </div>
 
-                        <input type="checkbox" name="checkbox" class="checkbox" placeholder=" " />
-                        <span class="icon-checkbox">
-                            <svg class="input-icon-checkbox">
-                                <use href="./images/image.svg/sprite.svg#icon-check">
-                                </use>
-                            </svg>
-                        </span>
-                        <p class="checkbox-text">Соглашаюсь с рассылкой и принимаю <a href=""><span
-                                    class="checkbox-text-doc">Условия договора</span></a></p>
+                    <label for="user_email" class="user-form"><span class="form-description">Почта</span></label>
+                    <div class="icon-form">
+                        <input type="email" name="user-email" id="user_email" class="form-input" />
+                        <svg class="input-icon">
+                            <use href="./images/image.svg/sprite.svg#icon-email">
+                            </use>
+                        </svg>
+                    </div>
+
+                    <label for="user_feedback" class="user-feedback"><span class="form-description">Комментарий</span>
                     </label>
+
+                    <div>
+                        <textarea name="feedback" id="user_feedback" placeholder="Введите текст"
+                            class="feedback-input"></textarea>
+                    </div>
+
+                    <div class=" forma-checkbox">
+                        <label for="checkbox_license" class="checkbox-container">
+                            <input type="checkbox" name="user-license" id="checkbox_license" class="checkbox" />
+                            <span class="icon-checkbox">
+                                <svg class="input-icon-checkbox">
+                                    <use href="./images/image.svg/sprite.svg#icon-check">
+                                    </use>
+                                </svg>
+                            </span>
+                        </label>
+                        <p class="checkbox-text">Соглашаюсь с рассылкой и принимаю <a href="">
+                                <span class="checkbox-text-doc">Условия договора</span></a>
+                        </p>
+
+                    </div>
+
+                    <button type="submit" class="button-submit" data-modal-open>Отправить</button>
+
                 </form>
-                <div class="button-flex">
-                    <button type="submit" class="submit" data-modal-open>Отправить</button>
-                </div>
 
             </div>
         </div>

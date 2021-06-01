@@ -227,7 +227,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-container">
-                <div class="">
+                <div class="address-container">
                     <a href="index.html" class="logo-footer"><span class="weblogo">Web</span>Studio</a>
                     <address class="address">
                         <p class="address-name">г. Киев, пр-т Леси Украинки, 26</p>
@@ -274,23 +274,22 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer-form">
+                <form action="footer_form" class="subscribe">
                     <p class="subscribe-title">Подпишитесь на рассылку</p>
-                    <form action="footer_form" class="subscribe">
-
-                        <label class="footer-subscribe">
-                            <input type="email" name="email" class="input-footer" placeholder="E-mail">
-                        </label>
-                        <button type="submit" class="submit-subscribe">Подписаться
-                            <svg class="input-footer-icon">
-                                <use href="./images/image.svg/sprite.svg#icon-icon-send">
-                                </use>
-                            </svg>
+                    <div class="subscribe-container">
+                        <label for="user_email" class="footer-subscribe"></label>
+                        <input type="email" name="email" id="user_email" class="input-footer" placeholder="E-mail" />
+                        <button type="submit" class="submit-subscribe">
+                            <span class="submit-icon">Подписаться
+                                <svg class="input-footer-icon">
+                                    <use href="./images/image.svg/sprite.svg#icon-icon-send">
+                                    </use>
+                                </svg>
+                            </span>
                         </button>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
-
         </div>
     </footer>
     <script src="./js/modal.js"></script>
