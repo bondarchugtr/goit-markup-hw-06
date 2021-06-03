@@ -378,7 +378,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-container">
-                <div class="">
+                <div class="address-container">
                     <a href="index.html" class="logo-footer"><span class="weblogo">Web</span>Studio</a>
                     <address class="address">
                         <p class="address-name">г. Киев, пр-т Леси Украинки, 26</p>
@@ -424,12 +424,12 @@
                 </div>
 
 
-                <form action="footer_form" class="subscribe">
+                <form action="footer_form" method="GET" class="subscribe">
                     <p class="subscribe-title">Подпишитесь на рассылку</p>
                     <div class="subscribe-container">
                         <label for="user_subscribe" class="footer-subscribe"></label>
-                        <input type="email" name="email" id="user_subscribe" class="input-footer"
-                            placeholder="E-mail" />
+                        <input type="email" name="email" id="user_subscribe" class="input-footer" placeholder="E-mail"
+                            autocomplete="off" />
                         <button type="submit" class="submit-subscribe">
                             <span class="submit-icon">Подписаться
                                 <svg class="input-footer-icon">
@@ -440,10 +440,8 @@
                         </button>
                     </div>
                 </form>
-
             </div>
         </div>
-
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -454,30 +452,31 @@
                         </use>
                     </svg></button>
 
-                <form name="signup_form" autocomplete="off" class="forma">
+                <form name="signup_form" method="GET" autocomplete="off" class="forma">
                     <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
 
-                    <label for="user_name" class="user-form"><span class="form-description">Имя</span></label>
+                    <label for="user_name" class="user-form"><span class="form-description">Имя*</span></label>
                     <div class="icon-form">
-                        <input type="text" name="user-name" id="user_name" class="form-input" />
+                        <input type="text" name="user-name" id="user_name" class="form-input" required />
                         <svg class="input-icon">
                             <use href="./images/image.svg/sprite.svg#icon-person">
                             </use>
                         </svg>
                     </div>
 
-                    <label for="user_phone" class="user-form"><span class="form-description">Телефон</span></label>
+                    <label for="user_phone" class="user-form"><span class="form-description">Телефон*</span></label>
                     <div class="icon-form">
-                        <input type="tel" name="phone" id="user_phone" class="form-input" />
+                        <input type="tel" name="phone" id="user_phone" class="form-input" required
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="095-222-22-22" />
                         <svg class="input-icon">
                             <use href="./images/image.svg/sprite.svg#icon-phone">
                             </use>
                         </svg>
                     </div>
 
-                    <label for="user_email" class="user-form"><span class="form-description">Почта</span></label>
+                    <label for="user_email" class="user-form"><span class="form-description">Почта*</span></label>
                     <div class="icon-form">
-                        <input type="email" name="user-email" id="user_email" class="form-input" />
+                        <input type="email" name="user-email" id="user_email" class="form-input" required />
                         <svg class="input-icon">
                             <use href="./images/image.svg/sprite.svg#icon-email">
                             </use>
@@ -491,8 +490,8 @@
                         <textarea name="feedback" id="user_feedback" placeholder="Введите текст"
                             class="feedback-input"></textarea>
                     </div>
-
                     <div class=" forma-checkbox">
+
                         <label for="checkbox_license" class="checkbox-container">
                             <input type="checkbox" name="user-license" id="checkbox_license" class="checkbox" />
                             <span class="icon-checkbox">
