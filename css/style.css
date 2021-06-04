@@ -979,7 +979,9 @@ margin-bottom: 50px;
     justify-content: center;
 }      
 
-.user-form{
+.user-form,
+.user-feedback{
+    display: block;
     margin-bottom: 4px;
 }
 
@@ -990,7 +992,7 @@ margin-bottom: 50px;
     line-height: 1.16;
     letter-spacing: 0.01em;
     color: var(--main-text-color);
-    margin-bottom: 4px;
+    
 
 }
 
